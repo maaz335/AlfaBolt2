@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React ,{useState}from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { TextInput } from 'react-native';
+
 
 export default function App() {
+  const [name, setName] = useState('');
   return (
     <View style={styles.container}>
-      <Text>Sir I installed React Native using Expo and</Text><Text>installed my first app!</Text> 
-      <Text>Union of 5 and 3 is {union(5, 3)}</Text>
-      <Text>Intersection of 5 and 3 is {intersection(5, 3)}</Text>
-      <Text>TypeScript is working!</Text>
+      <Text>Enter your Name: </Text><TextInput  value={name} onChangeText={(text) => setName(text)}></TextInput>
+      <Text>Welcome {name}</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,6 +17,10 @@ export default function App() {
 
 export function union(a: number, b: number): number {
   return a|b;
+}
+
+export function text(a:string): string {
+  return a;
 }
 
 export function intersection(a: number, b: number): number {

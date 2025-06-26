@@ -1,4 +1,4 @@
-package com.myfirstapp
+package com.anonymous.myFirstApp
 
 import android.app.Application
 import android.content.res.Configuration
